@@ -6,7 +6,7 @@ export function App () {
       <Paragraph>
         teste 1
       </Paragraph>
-      <Paragraph test="abc">
+      <Paragraph>
         teste 2
       </Paragraph>
     </div>
