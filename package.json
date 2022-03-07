@@ -10,6 +10,7 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "lint": "eslint ./src --ext .ts,.tsx",
+    "release": "standard-version",
     "prepare": "husky install"
   },
   "config": {
@@ -43,6 +44,7 @@
     "eslint-plugin-react": "^7.29.3",
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
+    "standard-version": "^9.3.2",
     "typescript": "^4.5.4",
     "vite": "^2.8.0"
   }
