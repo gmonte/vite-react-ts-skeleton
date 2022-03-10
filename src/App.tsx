@@ -1,17 +1,15 @@
-import { useState } from 'react'
-
-import {
-  I18nProvider,
-  I18n
-} from '@meta-react/i18n'
+import { I18n } from '@meta-react/i18n'
 
 import { Button } from './components/Button'
-import { dictionaries } from './translations'
+import { Router } from './routes'
+import { StoreProvider } from './store'
+import { useI18nStore } from './store/I18nStore'
 
-export function App () {
-  const [locale, setLocale] = useState('en')
+function AppStored () {
+  const { setLocale } = useI18nStore()
+
   return (
-    <I18nProvider locale={ locale } dictionaries={ dictionaries }>
+    <>
       <I18n as={ Button } onClick={ () => setLocale('en') }>
         english
       </I18n>
@@ -21,7 +19,18 @@ export function App () {
       <I18n as={ Button } onClick={ () => setLocale('pt-BR') }>
         brazilian portuguese
       </I18n>
+
       <p>MODE: {import.meta.env.MODE}</p>
-    </I18nProvider>
+
+      <Router />
+    </>
+  )
+}
+
+export function App () {
+  return (
+    <StoreProvider>
+      <AppStored />
+    </StoreProvider>
   )
 }
