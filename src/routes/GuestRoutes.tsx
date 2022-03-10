@@ -4,9 +4,9 @@ import {
   Navigate
 } from 'react-router-dom'
 
-import { GuestLayout } from '../../layouts/GuestLayout'
-import { SignIn } from '../../pages/SignIn'
-import { SignUp } from '../../pages/SignUp'
+import { GuestLayout } from '../layouts/GuestLayout'
+import { SignIn } from '../pages/SignIn'
+import { SignUp } from '../pages/SignUp'
 
 export function GuestRoutes () {
   return (
