@@ -21,6 +21,7 @@ export function App () {
       <I18n as={ Button } onClick={ () => setLocale('pt-BR') }>
         brazilian portuguese
       </I18n>
+      <p>MODE: {import.meta.env.MODE}</p>
     </I18nProvider>
   )
 }

@@ -4,6 +4,6 @@ type Props = HTMLAttributes<HTMLButtonElement>
 
 export function Button (props: Props) {
   return (
-    <button {...props} />
+    <button { ...props } />
   )
 }

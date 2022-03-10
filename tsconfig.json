@@ -1,5 +1,5 @@
 {
   "include": ["src"],
-  "extends": "@meta-configs/tsc/tsconfig.node",
+  "extends": "@meta-configs/tsc",
   "references": [{ "path": "./tsconfig.node.json" }]
 }  
