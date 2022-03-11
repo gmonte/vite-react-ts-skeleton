@@ -3,8 +3,8 @@ import {
   Link
 } from 'react-router-dom'
 
-import { Button } from '../../components/Button'
-import { useAuthStore } from '../../store/AuthStore'
+import { Button } from '~/components/Button'
+import { useAuthStore } from '~/store/AuthStore'
 
 export function AuthenticatedLayout () {
   const { setAuthenticated } = useAuthStore()

@@ -7,7 +7,8 @@ import {
 
 import { I18nProvider } from '@meta-react/i18n'
 
-import { dictionaries } from '../translations'
+import { dictionaries } from '~/translations'
+
 import {
   useLocalStorage,
   Setter

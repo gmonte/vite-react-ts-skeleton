@@ -1,5 +1,11 @@
 {
   "include": ["src"],
   "extends": "@meta-configs/tsc",
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  }
 }  

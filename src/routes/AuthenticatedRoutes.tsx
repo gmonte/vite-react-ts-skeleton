@@ -4,9 +4,9 @@ import {
   Navigate
 } from 'react-router-dom'
 
-import { AuthenticatedLayout } from '../layouts/AuthenticatedLayout'
-import { Dashboard } from '../pages/Dashboard'
-import { Home } from '../pages/Home'
+import { AuthenticatedLayout } from '~/layouts/AuthenticatedLayout'
+import { Dashboard } from '~/pages/Dashboard'
+import { Home } from '~/pages/Home'
 
 export function AuthenticatedRoutes () {
   return (

@@ -1,5 +1,5 @@
-import { Button } from '../../components/Button'
-import { useAuthStore } from '../../store/AuthStore'
+import { Button } from '~/components/Button'
+import { useAuthStore } from '~/store/AuthStore'
 
 export function SignIn () {
   const { setAuthenticated } = useAuthStore()
