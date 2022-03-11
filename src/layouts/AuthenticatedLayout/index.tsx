@@ -7,7 +7,7 @@ import { Button } from '~/components/Button'
 import { useAuthStore } from '~/store/AuthStore'
 
 export function AuthenticatedLayout () {
-  const { setAuthenticated } = useAuthStore()
+  const { logout } = useAuthStore()
 
   return (
     <div>
@@ -21,7 +21,7 @@ export function AuthenticatedLayout () {
 
       <br />
 
-      <Button onClick={ () => setAuthenticated(false) }>
+      <Button onClick={ logout }>
         Logout
       </Button>
     </div>

@@ -2,13 +2,13 @@ import { Button } from '~/components/Button'
 import { useAuthStore } from '~/store/AuthStore'
 
 export function SignIn () {
-  const { setAuthenticated } = useAuthStore()
+  const { login } = useAuthStore()
 
   return (
     <div>
       sign in
 
-      <Button onClick={ () => setAuthenticated(true) }>
+      <Button onClick={ login }>
         login
       </Button>
     </div>

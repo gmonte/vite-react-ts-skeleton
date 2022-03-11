@@ -5,34 +5,46 @@ import {
   useContext
 } from 'react'
 
-import {
-  useLocalStorage,
-  Setter
-} from '~/hooks/useLocalStorage'
+import { useLocalStorage } from '~/hooks/useLocalStorage'
+
+type Login = () => void
+
+type Logout = () => void
 
 interface AuthContextState {
   authenticated: boolean
-  setAuthenticated: Setter<boolean>
+  login: Login
+  logout: Logout
 }
 
-const initialState: AuthContextState = {
-  authenticated: false,
-  setAuthenticated: () => false
-}
-
-export const Context = createContext(initialState)
+export const Context = createContext({} as AuthContextState)
 
 export const useAuthStore = () => useContext(Context)
 
 export function AuthStore ({ children }: PropsWithChildren<{}>) {
   const [authenticated, setAuthenticated] = useLocalStorage('auth/authenticated', initialState.authenticated)
 
+  const login = useCallback<Login>(
+    () => {
+      setAuthenticated(true)
+    },
+    [setAuthenticated]
+  )
+
+  const logout = useCallback<Logout>(
+    () => {
+      setAuthenticated(false)
+    },
+    [setAuthenticated]
+  )
+
   const value = useMemo<AuthContextState>(
     () => ({
       authenticated,
-      setAuthenticated
+      login,
+      logout
     }),
-    [authenticated, setAuthenticated]
+    [authenticated, login, logout]
   )
 
   return (

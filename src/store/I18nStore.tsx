@@ -18,12 +18,7 @@ interface I18nContextState {
   setLocale: Setter<string>
 }
 
-const initialState: I18nContextState = {
-  locale: 'en',
-  setLocale: () => ''
-}
-
-export const Context = createContext(initialState)
+export const Context = createContext({} as I18nContextState)
 
 export const useI18nStore = () => useContext(Context)
 
