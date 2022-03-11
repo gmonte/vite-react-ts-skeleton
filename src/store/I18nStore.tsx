@@ -7,12 +7,11 @@ import {
 
 import { I18nProvider } from '@meta-react/i18n'
 
-import { dictionaries } from '~/translations'
-
 import {
   useLocalStorage,
   Setter
-} from './useLocalStorage'
+} from '~/hooks/useLocalStorage'
+import { dictionaries } from '~/translations'
 
 interface I18nContextState {
   locale: string

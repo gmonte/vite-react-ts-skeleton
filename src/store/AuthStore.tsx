@@ -8,7 +8,7 @@ import {
 import {
   useLocalStorage,
   Setter
-} from './useLocalStorage'
+} from '~/hooks/useLocalStorage'
 
 interface AuthContextState {
   authenticated: boolean
