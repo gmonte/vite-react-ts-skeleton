@@ -1,16 +1,10 @@
-import { Button } from '~/components/Button'
-import { useAuthStore } from '~/store/AuthStore'
+import { LoginForm } from '~/containers/LoginForm'
 
 export function SignIn () {
-  const { login } = useAuthStore()
-
   return (
     <div>
       sign in
-
-      <Button onClick={ login }>
-        login
-      </Button>
+      <LoginForm />
     </div>
   )
 }

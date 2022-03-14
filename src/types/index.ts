@@ -18,7 +18,7 @@ export interface AuthSuccessResponse {
   accessToken: string
 }
 
-export type AuthLogin = () => void
+export type AuthLogin = (username: string, password: string) => Promise<void>
 
 export type AuthLogout = () => void
 

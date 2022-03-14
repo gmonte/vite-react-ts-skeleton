@@ -21,7 +21,9 @@ export function AuthStore ({ children }: PropsWithChildren<{}>) {
   const [authenticated, setAuthenticated] = useLocalStorage('auth/authenticated', false)
 
   const login = useCallback<AuthLogin>(
-    async () => {
+    async (username, password) => {
+      console.log('username', username)
+      console.log('password', password)
       setAuthenticated(true)
     },
     [setAuthenticated]
