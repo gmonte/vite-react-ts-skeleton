@@ -23,7 +23,7 @@ export const Context = createContext({} as I18nContextState)
 export const useI18nStore = () => useContext(Context)
 
 export function I18nStore ({ children }: PropsWithChildren<{}>) {
-  const [locale, setLocale] = useLocalStorage('i18n/locale', initialState.locale)
+  const [locale, setLocale] = useLocalStorage('i18n/locale', 'en')
 
   const value = useMemo<I18nContextState>(
     () => ({

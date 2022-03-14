@@ -2,7 +2,8 @@ import {
   useMemo,
   createContext,
   PropsWithChildren,
-  useContext
+  useContext,
+  useCallback
 } from 'react'
 
 import { useLocalStorage } from '~/hooks/useLocalStorage'
@@ -22,10 +23,10 @@ export const Context = createContext({} as AuthContextState)
 export const useAuthStore = () => useContext(Context)
 
 export function AuthStore ({ children }: PropsWithChildren<{}>) {
-  const [authenticated, setAuthenticated] = useLocalStorage('auth/authenticated', initialState.authenticated)
+  const [authenticated, setAuthenticated] = useLocalStorage('auth/authenticated', false)
 
   const login = useCallback<Login>(
-    () => {
+    async () => {
       setAuthenticated(true)
     },
     [setAuthenticated]
