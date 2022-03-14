@@ -2,7 +2,7 @@
   "name": "react-web",
   "private": true,
   "version": "0.0.3",
-  "engenies": {
+  "engine": {
     "node": "16"
   },
   "scripts": {
