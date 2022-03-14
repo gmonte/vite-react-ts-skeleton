@@ -6,6 +6,7 @@
     "node": "16"
   },
   "scripts": {
+    "tsc": "tsc --noemit",
     "start": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
@@ -24,7 +25,7 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
-    "@meta-configs/eslint-config": "^1.0.6",
+    "@meta-configs/eslint-config": "^1.0.8",
     "@meta-configs/tsc": "^1.0.2",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",

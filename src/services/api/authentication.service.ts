@@ -1,17 +1,15 @@
-import { AxiosPromise } from 'axios'
-
-import api from '.'
 import {
+  Request,
   LoginRequest,
   AuthSuccessResponse
-} from './authentication.types'
+} from '~/types'
+
+import { api } from '.'
 
 const PREFIX = '/v1/auth'
 
-export const routes = {
-  login: `${PREFIX}/login`
-}
+export const routes = { login: `${ PREFIX }/login` }
 
-export async function login (data: LoginRequest): AxiosPromise<AuthSuccessResponse> {
+export async function login (data: LoginRequest): Request<AuthSuccessResponse> {
   return await api.post(routes.login, data)
 }

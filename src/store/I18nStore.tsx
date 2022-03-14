@@ -7,16 +7,9 @@ import {
 
 import { I18nProvider } from '@meta-react/i18n'
 
-import {
-  useLocalStorage,
-  Setter
-} from '~/hooks/useLocalStorage'
+import { useLocalStorage } from '~/hooks/useLocalStorage'
 import { dictionaries } from '~/translations'
-
-interface I18nContextState {
-  locale: string
-  setLocale: Setter<string>
-}
+import { I18nContextState } from '~/types'
 
 export const Context = createContext({} as I18nContextState)
 

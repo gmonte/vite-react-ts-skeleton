@@ -556,10 +556,10 @@
   resolved "https://registry.npmjs.org/@meta-awesome/i18n/-/i18n-0.0.18.tgz#3bd93e1304a8430087f1259726ddf910d2eea68b"
   integrity sha512-STLygUtz6InINxysT7La7mlJv/7o5q7GWmmYTFBWGnZg6h2o1pzoW9uqoIRpH8hWli3foZV2Y9J0/fZsSmM9dA==
 
-"@meta-configs/eslint-config@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.npmjs.org/@meta-configs/eslint-config/-/eslint-config-1.0.6.tgz#033b1085be796d97d3bdeec4fbb8a48f1bcddd8b"
-  integrity sha512-+R5JFF3cRdJTJO6NhLTlmMTXk8WaL7JqNeh7+GjT+N5duwP/A6/cfVNRjVIdYGk/2FJuontTFpH2T8AUJDcttQ==
+"@meta-configs/eslint-config@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.npmjs.org/@meta-configs/eslint-config/-/eslint-config-1.0.8.tgz#2183b0e6f99d56f33f5c98c64158f3e1c169f1b1"
+  integrity sha512-9ULHLl0AoTBGT4e5V++hKnPr1kpE6+lnAK5sm2ZSM44MWrowq8MEruJXFQ+z1qqaeFF6BwTLcl53dBHraEt1Tg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.0.1"
     "@typescript-eslint/parser" "^5.14.0"

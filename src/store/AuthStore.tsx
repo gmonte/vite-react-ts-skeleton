@@ -7,16 +7,11 @@ import {
 } from 'react'
 
 import { useLocalStorage } from '~/hooks/useLocalStorage'
-
-type Login = () => void
-
-type Logout = () => void
-
-interface AuthContextState {
-  authenticated: boolean
-  login: Login
-  logout: Logout
-}
+import {
+  AuthLogin,
+  AuthLogout,
+  AuthContextState
+} from '~/types'
 
 export const Context = createContext({} as AuthContextState)
 
@@ -25,14 +20,14 @@ export const useAuthStore = () => useContext(Context)
 export function AuthStore ({ children }: PropsWithChildren<{}>) {
   const [authenticated, setAuthenticated] = useLocalStorage('auth/authenticated', false)
 
-  const login = useCallback<Login>(
+  const login = useCallback<AuthLogin>(
     async () => {
       setAuthenticated(true)
     },
     [setAuthenticated]
   )
 
-  const logout = useCallback<Logout>(
+  const logout = useCallback<AuthLogout>(
     () => {
       setAuthenticated(false)
     },

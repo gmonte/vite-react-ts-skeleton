@@ -1,5 +1,7 @@
 import { AxiosError } from 'axios'
 
+import { api } from '.'
+
 export const createErrorMessageInterceptor = () => {
   api.interceptors.response.use(
     response => response,
